@@ -1,0 +1,11 @@
+
+
+
+mysql -uroot -p
+show databases;
+use users;
+select * from users;
+select userid.passwd,username from users;
+update users set passwd='' where userid=''#echo -n  admin  | openssl md5#21232f297a57a5a743894a0e4a801fc3
+flush uesrs;
+#systemclt restart mariadb.servics
