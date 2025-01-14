@@ -6,3 +6,48 @@ select userid.passwd,username from users;
 update users set passwd='' where userid=''#echo -n  admin  | openssl md5#21232f297a57a5a743894a0e4a801fc3
 flush uesrs;
 #systemclt restart mariadb.servics
+
+
+
+out 35891
+
+select distinct
+num1,callid,ucid,calling_pty,dialed_num,anslogin,origlogin,talktime
+from call_rec
+where num1 between '2024-10-11 00:00:00'
+and '2024-10-23 23:59:59'
+and dialed_num not in ('35891')
+and calling_pty!~ ('^0{5}\d{4}$')
+and calling_pty!~ ('^\d{5}$')
+and talktime>'0'
+order by num1```
+in 35891
+
+SELECT DISTINCT
+num1,callid,ucid,calling_pty,dialed_num,anslogin,origlogin,talktime
+FROM
+call_rec 
+WHERE
+num1 BETWEEN '2024-10-11 00:00:00 '   
+AND ' 2024-10-23 23:59:59'
+and dialed_num ='35891'
+ORDER BY num1
+000001234
+^0{5}\d{4}$
+^：表示匹配字符串的开始。
+0{5}：表示恰好匹配5个0。
+\d{4}：表示匹配4个数字（\d是数字的通配符）。
+$：表示匹配字符串的结束。
+
+登录分机号
+
+SELECT DISTINCT * FROM hagent WHERE 
+row_date BETWEEN '2024-10-22 11:00:00' 
+    AND '2024-10-23 23:59:59'  
+    and logid='43004
+
+Xie_h:
+rsync -avz -e "ssh -p 23096" /opt/jonnyan404/MrDoc/media/ root@10.101.173.247:/opt/jonnyan404/MrDoc/media/
+
+Xie_h:
+scp -P23096 /opt/jonnyan404/MrDoc/config/db.sqlite3 root@10.101.173.247:/opt/jonnyan404/MrDoc/config/db.sqlite3_back
